@@ -172,3 +172,4 @@ fabric.properties
 /web/css/
 /web/js/
 /.phpcs-cache
+/report.txt
