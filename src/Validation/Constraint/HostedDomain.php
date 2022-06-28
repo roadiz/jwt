@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RZ\Roadiz\JWT\Validation\Constraint;
@@ -32,7 +33,7 @@ class HostedDomain implements Constraint
              */
             if ($token->claims()->get('hd') !== $this->hostedDomain) {
                 throw new ConstraintViolation(
-                    'User ('.$token->claims()->get('hd').') does not belong to Hosted Domain.'
+                    'User (' . $token->claims()->get('hd') . ') does not belong to Hosted Domain.'
                 );
             }
         }
