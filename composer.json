@@ -6,13 +6,15 @@
     "authors": [
         {
             "name": "Ambroise Maupate",
-            "email": "ambroise@roadiz.io"
+            "email": "ambroise@roadiz.io",
+            "homepage": "https://www.roadiz.io",
+            "role": "Lead developer"
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "lcobucci/jwt": ">=3.3",
-        "guzzlehttp/guzzle": ">=6.3"
+        "php": ">=8.0",
+        "lcobucci/jwt": "^4.1",
+        "guzzlehttp/guzzle": "^7.2.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.5.3",
@@ -21,6 +23,12 @@
     "autoload": {
         "psr-4": {
             "RZ\\Roadiz\\JWT\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.0.x-dev",
+            "dev-develop": "2.2.x-dev"
         }
     }
 }
