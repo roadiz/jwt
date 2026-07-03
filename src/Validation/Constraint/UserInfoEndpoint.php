@@ -18,7 +18,6 @@ final readonly class UserInfoEndpoint implements Constraint
     ) {
     }
 
-    #[\Override]
     public function assert(Token $token): void
     {
         try {
@@ -29,7 +28,7 @@ final readonly class UserInfoEndpoint implements Constraint
             ]);
             // Trigger lazy request
             $response->getContent();
-        } catch (ExceptionInterface) {
+        } catch (ExceptionInterface $e) {
             throw new ConstraintViolation('Userinfo cannot be fetch from Identity provider');
         }
     }
